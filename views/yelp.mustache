@@ -2,16 +2,19 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
   </head>
   <body>
-    <h1>{{title}}</h1>
+      <div style="background:red">
+          <h1>{{title}}</h1>
 
-    {{#data.businesses}}
-        <span>{{name}}, {{location.address}}</span><br/>
-
-    {{/data.businesses}}
-
+          {{#data.businesses}}
+          <div style="background:blue;margin-top:16px;padding:16px;color:white">
+              <h2 style="magin:0px 0px 0px 0px">{{name}}, {{location.address}}</h2><br/>
+              <a target="_blank" style="color:white;text-decoration:none" href="{{url}}">Yelp</a>
+          </div> 
+          {{/data.businesses}}
+      </div>
   </body>
 
 
