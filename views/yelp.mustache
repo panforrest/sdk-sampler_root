@@ -2,22 +2,22 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-      <div style="background:red">
-          <h1>{{title}}</h1>
+      <div style="background:white">
+          <h2 id="title">{{title}}</h2>
 
           {{#data.businesses}}
-          <div style="background:#f9f9f9;margin-top:16px;padding:16px;color:#333;border:1px solid #ddd">
-              <img src="{{image_url}}" />
-              <h2 style="magin:0px 0px 0px 0px;font-family:Arial">{{name}}, {{location.address}}</h2><br/>
-              <a target="_blank" style="color:white;text-decoration:none" href="{{url}}">Yelp</a>
+          <div class="venue-box">
+              <img class="icon" src="{{image_url}}" />
+              <h2>{{name}}, {{location.address}}</h2><br/>
+              <a target="_blank" href="{{url}}">Yelp</a>
               <p>{{snippet_text}}</p>
               <p>{{location.address}}</p>
 
               <br />
-              <ol style="padding-left:16px">
+              <ol>
               {{#categories}}
                   <li>{{.}}</li>
                   
